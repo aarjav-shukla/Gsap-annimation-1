@@ -15,7 +15,7 @@ tl1.from(".navbar h2",{
 })
 
 tl1.from(".japan",{
-    y:40,
+    y:200,
     duration:1,
     delay:1,
     opacity:0,
@@ -187,3 +187,40 @@ gsap.from("form", {
     end: "top 0",
   },
 });
+
+gsap.fromTo(
+  ".japan",
+  {
+    duration: 1,
+    y: 0,
+
+    scrollTrigger: {
+      trigger: ".second-page",
+      scroller: "body",
+      scrub: 2,
+      markers: true,
+      start: "top 90%",
+      end: "top 0",
+    },
+  },
+  {
+    y: 300,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".second-page",
+      scroller: "body",
+      scrub: 2,
+      markers: true,
+      start: "top 90%",
+      end: "top 0",
+    },
+  },
+);
+
+
+
+
+
+
+
+
